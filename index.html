@@ -2,46 +2,61 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Documentos de la Empresa</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Multinivel</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 8px;
+            position: relative;
+        }
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        li:focus-within > .submenu {
+            display: block;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        a:hover {
+            color: blue;
+        }
+    </style>
 </head>
 <body>
-    <div class="container text-center mt-4">
-        <img src="/img/Logo_MMW32.png" alt="Logo de la Empresa" class="img-fluid" style="max-width: 200px;">
-        <h1 class="mt-3">Validación de EFOS EN _MMW32</h1>
-        <ul class="list-group mt-4">
-            <li class="list-group-item"><a href="https://lucid.app/lucidchart/9e278db2-684c-4719-b637-31d8fe1eca65/edit?beaconFlowId=7A3D1CABCEC29C58&invitationId=inv_ac0f7b99-b06c-4c97-b0fe-7d5b07c7bb81&page=0_0#" target="_blank">¿Que es un EFOS y un EDOS?</a></li>
-            <li class="list-group-item"><a href="/pdfs/20201023121914845.pdf" target="_blank">Solicitud de Requerimiento</a></li>
-            <li class="list-group-item"><a href="https://lucid.app/lucidchart/1cea57b6-6db8-4b76-b966-809a3d9803f2/edit?page=UJVYtsku1kZI&invitationId=inv_327971c2-d307-4400-a122-746825a43250#" target="_blank">Modelo Conceptual</a></li>
-            <li class="list-group-item"><a href="/pdfs/DESCRIPCIÓN GENERAL DEL PROCESO.pdf" target="_blank">Descripción General del Proceso</a></li>
-            <li class="list-group-item"><a href="/pdfs/MAPA MENTAL.pdf" target="_blank">Mapa Mental</a></li>
-            <li class="list-group-item"><a href="https://lucid.app/lucidchart/a02edc20-01c1-46f1-b088-75501f647e9c/edit?page=0_0&invitationId=inv_fbc82508-89f0-4a8c-8adf-5e2fae22e8b0#" target="_blank">Diagrama de flujo de Importación de Información</a></li>
-            <li class="list-group-item"><a href="https://sheet.zoho.com/sheet/open/qt55obbdc674765504837bd1c27204f8e676f" target="_blank">Archivo de EFOS del SAT</a></li>
-            <li class="list-group-item"><a href="https://lucid.app/lucidchart/4a2e499b-0017-4196-9437-8e5089c72a86/edit?beaconFlowId=2B60B3F5A21CA249&page=0_0&invitationId=inv_06ffd899-50c3-4e1b-9645-bd646eeaffb2#" target="_blank">Modelo Entidad Relación</a></li>
-            <li class="list-group-item"><a href="https://sheet.zoho.com/sheet/open/qt55od8eaee8d28b84e14a4c57ee310def4c5?sheetid=0&range=A1" target="_blank">Mapeo de los campos en la BD</a></li>
-            <li class="list-group-item"><a href="https://lucid.app/lucidchart/52d9e39b-64bd-4cc0-93aa-e19c59d04971/edit?page=0_0&invitationId=inv_1e554467-7df5-4052-aa54-52f66d5c2e92#" target="_blank">Front End para Importar el Archivo de EFOS del SAT</a></li>
-            <li class="list-group-item"><a href="https://lucid.app/lucidchart/1f430694-6840-4e08-92ed-ed16eb98b559/edit?invitationId=inv_c7649c25-e109-42ab-90d6-a487f36bc713&page=0_0#" target="_blank">Diagrama de Flujo de Pedidos de VN</a></li>
-            <li class="list-group-item"><a href="https://lucid.app/lucidchart/4080e8c7-6238-45cb-ac1c-f7fcb4417f79/edit?invitationId=inv_5759d669-2922-41ed-85fb-0977ab527551&page=0_0#" target="_blank">Diagrama de Flujo de Factura de VN</a></li>
-            <li class="list-group-item"><a href="https://lucid.app/lucidchart/477e96cf-41a2-4d4c-971b-b49e5c4e706e/edit?page=0_0&invitationId=inv_d2e336eb-0cf8-42a6-beeb-c8fee6974eaf#" target="_blank">Diagrama de Flujo de Pedidos de VO</a></li>
-            <li class="list-group-item"><a href="https://lucid.app/lucidchart/e84fbc24-4037-459a-9244-6f5e2df7094b/edit?page=0_0&invitationId=inv_d9f066cd-f505-40d4-ae04-581bc479ee73#" target="_blank">Diagrama de Flujo de Factura de VO</a></li>
-            <li class="list-group-item"><a href="https://lucid.app/lucidchart/c0bdc2ba-ef6a-4d36-b3c2-f597ab0e03a4/edit?page=0_0&invitationId=inv_7c02624d-297b-4f90-947d-42f6199bf1a1#" target="_blank">Diagrama de Flujo de Factura de Ventas de Mostrador</a></li>
-            <li class="list-group-item"><a href="https://lucid.app/lucidchart/7d802772-1aeb-476f-ad27-e846db3896e8/edit?page=0_0&invitationId=inv_7246c43c-ed87-4e22-92be-14def4bc3937#" target="_blank">Diagrama de Flujo de Factura Especial</a></li>
-            <li class="list-group-item"><a href="https://lucid.app/lucidchart/c7d10660-22fd-4e7c-8b1b-36c0786b0bd3/edit?page=0_0&invitationId=inv_4d85db22-a679-49ab-bd43-c46ac9086042#" target="_blank">Diagrama de Flujo de Ordenes de Servicio </a></li>
-            <li class="list-group-item"><a href="https://lucid.app/lucidchart/03c54680-bf0c-41d3-a99d-e12285b2bb39/edit?page=0_0&invitationId=inv_b5a63c95-28d7-46e8-98e5-78532adea0e9#" target="_blank">Diagrama de Flujo de Factura de Ordenes de Servicio</a></li>
-            <li class="list-group-item"><a href="https://lucid.app/lucidchart/23f1ac78-381e-4ac0-bf3e-972c42ea7383/edit?page=0_0&invitationId=inv_35813f79-8c32-4109-bb89-63ba06383d97#" target="_blank">Diagrama de Flujo de Anticipos </a></li>
-            <li class="list-group-item"><a href="https://lucid.app/lucidchart/840f4a45-a7ef-45fd-867c-68564ad5d9cc/edit?page=0_0&invitationId=inv_3738642e-9d57-403f-91cb-52ce373252c8#" target="_blank">Diagrama de Flujo de Notas de Débito </a></li>
-            <li class="list-group-item"><a href="https://lucid.app/lucidchart/479904d0-7e06-4508-9b11-3c4a7ebb2631/edit?page=0_0&invitationId=inv_b2be2d37-d051-4b99-bb6a-4caa2111af2e#" target="_blank">Diagrama de Flujo de Cargos de Compras de VN</a></li>
-            <li class="list-group-item"><a href="https://lucid.app/lucidchart/a592fb49-3892-449d-b5e9-32c93f216349/edit?page=0_0&invitationId=inv_62e9feac-1400-46c4-95a2-24702a74748c#" target="_blank">Diagrama de Flujo de Gastos de Compras de VN</a></li>
-            <li class="list-group-item"><a href="https://lucid.app/lucidchart/d1f88935-5f1e-4033-ab28-8e75f6a3bb42/edit?page=0_0&invitationId=inv_a30139dc-9e22-45a3-b959-4b508845d8b2#" target="_blank">Diagrama de Flujo de Compra de VO</a></li>
-            <li class="list-group-item"><a href="https://lucid.app/lucidchart/fe74ab7d-25ba-4252-8630-77200c84e581/edit?page=0_0&invitationId=inv_d08cd364-0415-4492-881c-b6a57dc6d1d6#" target="_blank">Diagrama de Flujo de Cargos de Compras de VO</a></li>
-            <li class="list-group-item"><a href="https://lucid.app/lucidchart/9449526d-0536-4d18-8779-e6bb1f9ac034/edit?page=0_0&invitationId=inv_7928f353-8292-4240-bdb5-a847165eb4f0#" target="_blank">Diagrama de Flujo de Gastos de Compras de VO</a></li>
-            <li class="list-group-item"><a href="https://lucid.app/lucidchart/be265047-422c-409e-bc8a-81211c23e7fe/edit?page=0_0&invitationId=inv_8cdd43b6-07ca-44b5-9f13-5f4055d22078#" target="_blank">Diagrama de Flujo de Compras de Refracciones</a></li>
-            <li class="list-group-item"><a href="https://lucid.app/lucidchart/0134aa23-6cdc-4ae2-aaa6-7c7d243b6f50/edit?page=0_0&invitationId=inv_715dc7a4-4a4c-44ea-b450-a20b715caa2b#" target="_blank">Diagrama de Flujo Compra de TOT</a></li>
-            <li class="list-group-item"><a href="https://lucid.app/lucidchart/809900be-9cf7-4310-8e20-d7b429337d9d/edit?page=0_0&invitationId=inv_f50ea8b9-9195-41d0-830a-e9d0902fe5f1#" target="_blank">Diagrama de Flujo Pagos en Línea</a></li>
-        </ul>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <ul>
+        <li>
+            <a href="#" tabindex="0">Nivel 1</a>
+            <ul class="submenu">
+                <li>
+                    <a href="#" tabindex="0">Subnivel 1.1</a>
+                    <ul class="submenu">
+                        <li><a href="#">Subnivel 1.1.1</a></li>
+                        <li><a href="#">Subnivel 1.1.2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Subnivel 1.2</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" tabindex="0">Nivel 2</a>
+            <ul class="submenu">
+                <li><a href="#">Subnivel 2.1</a></li>
+                <li><a href="#">Subnivel 2.2</a></li>
+            </ul>
+        </li>
+    </ul>
 </body>
 </html>
