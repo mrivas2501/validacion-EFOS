@@ -10,6 +10,8 @@
             list-style-type: none;
             padding: 0;
             margin: 0;
+            position: relative;
+            z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
         }
         li {
             padding: 8px;
@@ -18,12 +20,20 @@
         .submenu {
             display: none;
             position: absolute;
-            top: 0;
-            left: 70%; /* Submenú aparece a la derecha */
+            top: 100%; /* Ajustado para evitar que el submenú se superponga */
+            left: 0; /* Se alinea con el elemento padre */
             background: white;
             padding: 10px;
             border: 1px solid #ccc;
             min-width: 150px;
+            z-index: 1001; /* Mayor que el menú principal */
+        }
+        .submenu li {
+            position: relative;
+        }
+        .submenu .submenu {
+            top: 0;
+            left: 100%; /* Submenús anidados aparecen a la derecha */
         }
         li:focus-within > .submenu,
         li:hover > .submenu {
