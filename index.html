@@ -9,6 +9,7 @@
         ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
         li {
             padding: 8px;
@@ -17,21 +18,28 @@
         .submenu {
             display: none;
             position: absolute;
-            top: 100%;
-            left: 0;
+            top: 0;
+            left: 100%; /* Submenú aparece a la derecha */
             background: white;
             padding: 10px;
             border: 1px solid #ccc;
+            min-width: 150px;
         }
-        li:focus-within > .submenu {
+        li:focus-within > .submenu,
+        li:hover > .submenu {
             display: block;
         }
         a {
             text-decoration: none;
             color: black;
             font-weight: bold;
+            display: block;
+            padding: 8px;
+            background: #f8f8f8;
+            border-radius: 5px;
         }
         a:hover {
+            background: #ddd;
             color: blue;
         }
     </style>
